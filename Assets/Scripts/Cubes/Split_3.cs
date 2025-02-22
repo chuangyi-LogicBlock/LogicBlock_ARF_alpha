@@ -47,7 +47,7 @@ public class Split_3 : MonoBehaviour
         Vector3 spawnPosition = transform.position + direction * offsetDistance;
         GameObject newBall = Instantiate(originalBall, spawnPosition, Quaternion.identity);
         Rigidbody rb = newBall.GetComponent<Rigidbody>();
-        rb.velocity = direction * shootForce;
+        rb.linearVelocity = direction * shootForce;
 
         // 保持新生成小球的属性一致
         newBall.transform.localScale = originalScale;
@@ -81,7 +81,7 @@ public class Split_3 : MonoBehaviour
         Vector3 spawnPosition = transform.position + direction * offsetDistance;
         GameObject newPerson = Instantiate(originalPerson, spawnPosition, Quaternion.identity);
         Rigidbody rb = newPerson.GetComponent<Rigidbody>();
-        rb.velocity = direction * shootForce;
+        rb.linearVelocity = direction * shootForce;
 
         // 保持新生成小球的属性一致
         newPerson.transform.localScale = originalScale;

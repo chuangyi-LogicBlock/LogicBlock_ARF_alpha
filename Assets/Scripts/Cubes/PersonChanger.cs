@@ -11,7 +11,7 @@ public class PersonChanger : MonoBehaviour
         if (rb != null)
         {
             // 获取原小人的速度
-            Vector3 originalVelocity = rb.velocity;
+            Vector3 originalVelocity = rb.linearVelocity;
 
             // 获取原小人的位置和旋转
             Vector3 position = other.transform.position;
@@ -28,7 +28,7 @@ public class PersonChanger : MonoBehaviour
             if (newRb != null)
             {
                 // 给新小人设置原来的速度
-                newRb.velocity = originalVelocity;
+                newRb.linearVelocity = originalVelocity;
             }
 
             // 获取新小人的动画组件
